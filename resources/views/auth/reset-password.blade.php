@@ -22,7 +22,6 @@
             <a href="{{ route('home') }}" class="image mb-2 mb-sm-4">
                 <img alt="Logo" src="{{ getLogoUrl() }}" class="img-fluid logo-fix-size">
             </a>
-            <span class="text-gray-900 fs-1 fw-bold ms-3">{{ getAppName() }}</span>
         </div>
         <div class="width-540">
             @include('layouts.errors')

@@ -1270,7 +1270,10 @@ Route::middleware(['freshInstall'])->group(function () {
         'analytics',
         'language',
         'vcardSubscription',
-    ])->where('alias', '^(?!(?:about|faq|templates|press|nfc-cards|nfc-business-cards|nfc-business-card-guide|contact|pvc-nfc-business-card|metal-nfc-business-card|nfc-google-reviews|nfc-vs-qr|qr-code-generator|nfc-card-near)$).+');
+    // One path segment only. `.+` also matches "/" and this route is registered
+    // before the WhatsApp store and vCard subpage routes, so it used to claim
+    // /whatsapp-store/{alias} and return the vCard 404.
+    ])->where('alias', '^(?!(?:about|faq|templates|press|nfc-cards|nfc-business-cards|nfc-business-card-guide|contact|pvc-nfc-business-card|metal-nfc-business-card|nfc-google-reviews|nfc-vs-qr|qr-code-generator|nfc-card-near)$)[^/]+');
 
     //whatsapp stores  URL
     Route::get('whatsapp-store/{alias}', [WhatsappStoreController::class, 'show'])->name('whatsapp.store.show')->middleware('language', 'analytics', 'whatsappStoreSubscription');

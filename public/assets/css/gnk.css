@@ -86,6 +86,15 @@ body:has(.authImage) .reset-password-section.bg-white > .row > .col-md-6 {
     background: transparent !important;
 }
 
+body:has(.authImage) .forget-password-form .bg-white,
+body:has(.authImage) .reset-password-form .bg-white,
+body:has(.authImage) .register-form .bg-white,
+body:has(.authImage) .login-form .bg-white {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 body:has(.authImage) .login-form,
 body:has(.authImage) .register-form,
 body:has(.authImage) .forget-password-form,
@@ -102,29 +111,55 @@ body:has(.authImage) .modern-login-card {
     backdrop-filter: blur(16px);
 }
 
+body:has(.authImage) .login-section,
+body:has(.authImage) .register-section,
+body:has(.authImage) .forget-password-section,
+body:has(.authImage) .reset-password-section {
+    margin-top: 0 !important;
+}
+
 body:has(.authImage) .login-app-name {
     margin-bottom: 8px;
 }
 
+/* The uploaded mark is the V plus the word CARDe. Auth screens show the V only. */
+body:has(.authImage) .login-app-name .image,
 body:has(.authImage) .login-app-name .image-mini,
+body:has(.authImage) .forget-password-form .image,
 body:has(.authImage) .forget-password-form .image-mini,
+body:has(.authImage) .register-form .image,
 body:has(.authImage) .register-form .image-mini,
+body:has(.authImage) .reset-password-form .image,
 body:has(.authImage) .reset-password-form .image-mini {
-    width: auto !important;
-    height: auto !important;
-    margin-right: 12px !important;
+    display: inline-block !important;
+    width: 78px !important;
+    height: 92px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    line-height: 0;
 }
 
 body:has(.authImage) .login-app-name img,
+body:has(.authImage) .forget-password-form .image img,
 body:has(.authImage) .forget-password-form .image-mini img,
+body:has(.authImage) .register-form .image img,
 body:has(.authImage) .register-form .image-mini img,
+body:has(.authImage) .reset-password-form .image img,
 body:has(.authImage) .reset-password-form .image-mini img {
-    width: auto !important;
+    width: 251px !important;
+    height: 167px !important;
     min-width: 0 !important;
-    height: 72px !important;
-    max-height: 72px !important;
-    max-width: 160px !important;
-    object-fit: contain;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    margin: -35px 0 0 -8px !important;
+}
+
+body:has(.authImage) .login-app-name .fs-1,
+body:has(.authImage) .forget-password-form .fs-1.fw-bold,
+body:has(.authImage) .register-form .fs-1.fw-bold,
+body:has(.authImage) .reset-password-form .fs-1.fw-bold {
+    display: none !important;
 }
 
 body:has(.authImage) .input-password-hide,
@@ -148,6 +183,10 @@ body:has(.authImage) .register-form .text-gray-900,
 body:has(.authImage) .forget-password-form .text-gray-900,
 body:has(.authImage) .reset-password-form .text-gray-900,
 body:has(.authImage) h1.text-center.mb-7,
+body:has(.authImage) .forget-password-form h1,
+body:has(.authImage) .reset-password-form h1,
+body:has(.authImage) .forget-password-form .fs-4,
+body:has(.authImage) .reset-password-form .fs-4,
 body:has(.authImage) .form-label,
 body:has(.authImage) .col-form-label,
 body:has(.authImage) .form-check-label {
