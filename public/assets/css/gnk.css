@@ -11,16 +11,30 @@ body:has(.authImage) {
 }
 
 body:has(.authImage) .authImage {
+    position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     background: transparent !important;
     background-image: none !important;
+}
+
+body:has(.authImage) .authImage > .dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0 !important;
 }
 
 body:has(.authImage) .login-section.bg-white,
 body:has(.authImage) .register-section.bg-white,
 body:has(.authImage) .forget-password-section.bg-white,
 body:has(.authImage) .reset-password-section.bg-white {
-    min-height: 100vh;
+    width: 100%;
+    min-height: 0 !important;
+    height: auto !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -42,7 +56,7 @@ body:has(.authImage) .register-section.bg-white > .row,
 body:has(.authImage) .forget-password-section.bg-white > .row,
 body:has(.authImage) .reset-password-section.bg-white > .row {
     width: min(440px, calc(100vw - 32px));
-    margin: 24px auto !important;
+    margin: 0 auto !important;
     justify-content: center;
 }
 
@@ -78,6 +92,46 @@ body:has(.authImage) .modern-login-card {
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45) !important;
     padding: 32px 28px 18px !important;
     backdrop-filter: blur(16px);
+}
+
+body:has(.authImage) .login-app-name {
+    margin-bottom: 8px;
+}
+
+body:has(.authImage) .login-app-name .image-mini,
+body:has(.authImage) .forget-password-form .image-mini,
+body:has(.authImage) .register-form .image-mini,
+body:has(.authImage) .reset-password-form .image-mini {
+    width: auto !important;
+    height: auto !important;
+    margin-right: 12px !important;
+}
+
+body:has(.authImage) .login-app-name img,
+body:has(.authImage) .forget-password-form .image-mini img,
+body:has(.authImage) .register-form .image-mini img,
+body:has(.authImage) .reset-password-form .image-mini img {
+    width: auto !important;
+    min-width: 0 !important;
+    height: 64px !important;
+    max-height: 64px !important;
+    max-width: 92px !important;
+    object-fit: contain;
+}
+
+body:has(.authImage) .input-password-hide,
+body:has(.authImage) .input-icon {
+    color: rgba(244, 247, 251, 0.72) !important;
+}
+
+body:has(.authImage) .form-check-input {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+body:has(.authImage) .form-check-input:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
 }
 
 body:has(.authImage) .login-app-name .text-gray-900,

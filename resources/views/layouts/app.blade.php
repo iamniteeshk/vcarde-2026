@@ -35,7 +35,7 @@
         <link rel="stylesheet" type="text/css" href="{{ mix('assets/css/page.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('assets/css/theme.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('assets/css/lazy-loading.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=6') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=7') }}">
 
         @livewireScripts
         <script src="{{ asset('vendor/rappasoft/livewire-tables/js/laravel-livewire-tables.min.js') }}"></script>
