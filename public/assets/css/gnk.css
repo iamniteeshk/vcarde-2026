@@ -1,4 +1,4 @@
-/* Login screens: teal-to-blue aurora behind the card. */
+/* Auth screens sit as one card in the middle of the aurora. */
 body:has(.authImage) {
     background-color: #04141c !important;
     background-image: url("/assets/images/login-aurora.jpg") !important;
@@ -6,48 +6,153 @@ body:has(.authImage) {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    color: #ffffff;
+    color: #f4f7fb;
     min-height: 100vh;
 }
 
-body:has(.authImage) .authImage,
-body:has(.authImage) .login-section,
-body:has(.authImage) .login-section.bg-white {
+body:has(.authImage) .authImage {
+    min-height: 100vh;
     background: transparent !important;
     background-image: none !important;
 }
 
-body:has(.authImage) .login-img {
+body:has(.authImage) .login-section.bg-white,
+body:has(.authImage) .register-section.bg-white,
+body:has(.authImage) .forget-password-section.bg-white,
+body:has(.authImage) .reset-password-section.bg-white {
+    min-height: 100vh;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    background-image: none !important;
+    overflow: visible !important;
+}
+
+body:has(.authImage) .top-vector,
+body:has(.authImage) .bottom-vector,
+body:has(.authImage) .login-img,
+body:has(.authImage) .register-img,
+body:has(.authImage) .forget-password-img {
     display: none !important;
 }
 
-body:has(.authImage) .modern-login-card,
-body:has(.authImage) .login-form {
-    background: rgba(7, 16, 32, 0.78) !important;
+body:has(.authImage) .login-section.bg-white > .row,
+body:has(.authImage) .register-section.bg-white > .row,
+body:has(.authImage) .forget-password-section.bg-white > .row,
+body:has(.authImage) .reset-password-section.bg-white > .row {
+    width: min(440px, calc(100vw - 32px));
+    margin: 24px auto !important;
+    justify-content: center;
+}
+
+body:has(.authImage) .login-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .register-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .forget-password-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .reset-password-section.bg-white > .row > .col-md-6:first-child {
+    display: none !important;
+}
+
+body:has(.authImage) .login-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .register-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .forget-password-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .reset-password-section.bg-white > .row > .col-md-6 {
+    width: 100%;
+    max-width: 440px;
+    flex: none;
+    padding: 0;
+    background: transparent !important;
+}
+
+body:has(.authImage) .login-form,
+body:has(.authImage) .register-form,
+body:has(.authImage) .forget-password-form,
+body:has(.authImage) .reset-password-form,
+body:has(.authImage) .modern-login-card {
+    height: auto !important;
+    width: 100%;
+    background: rgba(7, 16, 32, 0.82) !important;
     color: #f4f7fb !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 22px !important;
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45) !important;
+    padding: 32px 28px 18px !important;
+    backdrop-filter: blur(16px);
 }
 
-body:has(.authImage) .modern-login-card .form-label,
-body:has(.authImage) .modern-login-card label,
-body:has(.authImage) .login-form .form-label,
-body:has(.authImage) .login-form label {
-    color: #e7eef8 !important;
-}
-
-body:has(.authImage) .bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
-    --bs-bg-opacity: 1;
-    background-color: #13151f !important;
-}
-
+body:has(.authImage) .login-app-name .text-gray-900,
+body:has(.authImage) .login-form .text-gray-900,
+body:has(.authImage) .register-form .text-gray-900,
+body:has(.authImage) .forget-password-form .text-gray-900,
+body:has(.authImage) .reset-password-form .text-gray-900,
+body:has(.authImage) h1.text-center.mb-7,
+body:has(.authImage) .form-label,
 body:has(.authImage) .col-form-label,
-body:has(.authImage) .form-label {
-    color: #ffffff;
+body:has(.authImage) .form-check-label {
+    color: #f4f7fb !important;
 }
 
-body:has(.authImage) h1.text-center.mb-7 {
-    color: #3ddc84;
+body:has(.authImage) .form-control {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 12px;
+    min-height: 46px;
+}
+
+body:has(.authImage) .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+body:has(.authImage) .login-btn,
+body:has(.authImage) button[type="submit"].btn {
+    background: #22c55e !important;
+    border-color: #16a34a !important;
+    color: #05210f !important;
+    font-weight: 700;
+    border-radius: 12px;
+    min-height: 48px;
+}
+
+body:has(.authImage) .link-info,
+body:has(.authImage) .copyright a {
+    color: #86efac !important;
+}
+
+body:has(.authImage) .copyright,
+body:has(.authImage) .text-muted {
+    color: rgba(244, 247, 251, 0.62) !important;
+}
+
+body:has(.authImage) #dropdownMenuButton1 {
+    background: rgba(7, 16, 32, 0.55) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: #f4f7fb !important;
+    border-radius: 999px;
+    box-shadow: none !important;
+}
+
+body:has(.authImage) .google-btn,
+body:has(.authImage) .facebook-btn {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 46px;
+    justify-content: center;
+}
+
+body:has(.authImage) .login-form .row.justify-content-between,
+body:has(.authImage) .register-form .row.justify-content-between {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+body:has(.authImage) .login-form .row.justify-content-between > [class*="col-"],
+body:has(.authImage) .register-form .row.justify-content-between > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 /*
