@@ -29,5 +29,8 @@ class VerifyCsrfToken extends Middleware
         'sslcommerz/cancel',
         'sslcommerz/ipn',
         'subscription-iyzico-success',
+        // Sign-out must finish even when the page token is stale. A stale
+        // token otherwise shows "Page Expired" instead of the login screen.
+        'logout',
     ];
 }
