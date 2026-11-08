@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=4') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=5') }}">
         <style>
     /* Modern Input Focus Effects */
     .modern-input:focus {

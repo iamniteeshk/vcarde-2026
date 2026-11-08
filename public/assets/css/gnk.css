@@ -1,13 +1,39 @@
-/* Login screens keep the branded dark backdrop. */
+/* Login screens: teal-to-blue aurora behind the card. */
 body:has(.authImage) {
-    background-image:
-        url("https://vcarde.com/assets/assets-home/img/nft/banner/b-sh2.png"),
-        url("https://vcarde.com/assets/assets-home/img/nft/banner/b-sh1.png");
-    background-size: auto 100%, auto 100%;
-    background-repeat: no-repeat, no-repeat;
-    background-position: right top, left top;
-    background-color: #010101;
+    background-color: #04141c !important;
+    background-image: url("/assets/images/login-aurora.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
     color: #ffffff;
+    min-height: 100vh;
+}
+
+body:has(.authImage) .authImage,
+body:has(.authImage) .login-section,
+body:has(.authImage) .login-section.bg-white {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+body:has(.authImage) .login-img {
+    display: none !important;
+}
+
+body:has(.authImage) .modern-login-card,
+body:has(.authImage) .login-form {
+    background: rgba(7, 16, 32, 0.78) !important;
+    color: #f4f7fb !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45) !important;
+}
+
+body:has(.authImage) .modern-login-card .form-label,
+body:has(.authImage) .modern-login-card label,
+body:has(.authImage) .login-form .form-label,
+body:has(.authImage) .login-form label {
+    color: #e7eef8 !important;
 }
 
 body:has(.authImage) .bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
