@@ -1,23 +1,48 @@
-body {
-    background-image: 
-        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh2.png'), /* Right Image */
-        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh1.png'); /* Left Image */
-    background-size: auto 100%, auto 100%; /* Set the size of each image */
-    background-repeat: no-repeat, no-repeat; /* Disable repeating for both images */
-    background-position: right top, left top; /* Set positions for both images */
-    background-color: #010101; /* Set a fallback color */
+/* Login and other auth screens only. These rules must not cover the admin. */
+body:has(.authImage) {
+    background-image:
+        url("https://vcarde.com/assets/assets-home/img/nft/banner/b-sh2.png"),
+        url("https://vcarde.com/assets/assets-home/img/nft/banner/b-sh1.png");
+    background-size: auto 100%, auto 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left top;
+    background-color: #010101;
     color: #ffffff;
 }
 
-
-.bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
+body:has(.authImage) .bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
     --bs-bg-opacity: 1;
-    background-color: #13151f!important;
-}
-.col-form-label, .form-label {
-    color: #ffffff;
-}
-h1.text-center.mb-7 {
-    color: green;
+    background-color: #13151f !important;
 }
 
+body:has(.authImage) .col-form-label,
+body:has(.authImage) .form-label {
+    color: #ffffff;
+}
+
+body:has(.authImage) h1.text-center.mb-7 {
+    color: #3ddc84;
+}
+
+/* Laravel admin: flat shell, no marketing artwork behind the panels. */
+body:has(.aside-menu-container) {
+    background-image: none;
+    background-color: #0b0d14;
+}
+
+body:has(.aside-menu-container) .header .btn,
+body:has(.aside-menu-container) .header .dropdown-toggle,
+body:has(.aside-menu-container) .header .nav-link,
+body:has(.aside-menu-container) .header .dashboard-theme-icons {
+    color: #f5f7fb !important;
+}
+
+/* Stat cards use tinted backgrounds with same-hue type. Force readable type. */
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content p,
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content h5 {
+    color: #ffffff !important;
+}
+
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content p {
+    opacity: 0.86;
+}
