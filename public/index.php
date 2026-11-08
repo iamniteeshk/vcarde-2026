@@ -3,6 +3,57 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
+/*
+ * Serve the React homepage before Laravel boots. InfyOm's stock "/" route
+ * redirects to /login, and an update replaces routes/web.php. This file is
+ * kept in place so vcarde.com keeps opening the public site. Any other
+ * hostname falls through so a custom domain still opens its vCard.
+ */
+$host = strtolower((string) preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+$method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
+$uri = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
+$spaPath = trim($uri, '/');
+$spaPages = [
+    'about',
+    'faq',
+    'templates',
+    'press',
+    'nfc-cards',
+    'nfc-business-cards',
+    'nfc-business-card-guide',
+    'contact',
+    'pvc-nfc-business-card',
+    'metal-nfc-business-card',
+    'nfc-google-reviews',
+    'nfc-vs-qr',
+    'qr-code-generator',
+    'nfc-card-near',
+];
+$isSpaPage = $spaPath === ''
+    || in_array($spaPath, $spaPages, true)
+    || preg_match('#^nfc-card-near/[a-z0-9-]+$#', $spaPath) === 1;
+
+if (
+    in_array($host, ['vcarde.com', 'www.vcarde.com'], true)
+    && in_array($method, ['GET', 'HEAD'], true)
+    && $isSpaPage
+) {
+    $spaHome = __DIR__.'/spa-home/index.html';
+    if (is_file($spaHome)) {
+        header('Content-Type: text/html; charset=UTF-8');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('CDN-Cache-Control: no-store');
+        header('X-Content-Type-Options: nosniff');
+        header('Content-Length: '.filesize($spaHome));
+        if ($method !== 'HEAD') {
+            readfile($spaHome);
+        }
+        exit;
+    }
+}
+
+
 define('LARAVEL_START', microtime(true));
 
 /*

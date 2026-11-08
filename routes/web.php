@@ -716,7 +716,7 @@ Route::middleware(['freshInstall'])->group(function () {
                 [PlanController::class, 'makePlanDefault']
             )->name('make.plan.default');
             //currency
-            Route::get('/currencies', [CurrencyController::class, 'index'])->name('currencies.index');
+            Route::resource('/currencies', CurrencyController::class);
             Route::get('/send-mail', [SendMailController::class, 'index'])->name('send.mail.index');
             Route::post('/send-mail-store', [SendMailController::class, 'store'])->name('send.mail.store');
             Route::get('/email-templates', [EmailTemplatesController::class, 'index'])->name('email.templates.index');

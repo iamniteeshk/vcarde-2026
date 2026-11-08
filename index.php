@@ -76,4 +76,55 @@ if ($publicRoot && $uri !== '/' && strpos($uri, "\0") === false) {
     }
 }
 
+/*
+ * The React homepage lives here, before Laravel. An InfyOm upload replaces
+ * routes/web.php and its stock "/" route sends visitors to /login. This
+ * file stays in place across those uploads, so the public site keeps loading
+ * on vcarde.com. Other hostnames still fall through to Laravel (custom domains
+ * open the matching vCard).
+ */
+$host = strtolower((string) preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+$method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
+$spaPath = trim($uri, '/');
+$spaPages = [
+    'about',
+    'faq',
+    'templates',
+    'press',
+    'nfc-cards',
+    'nfc-business-cards',
+    'nfc-business-card-guide',
+    'contact',
+    'pvc-nfc-business-card',
+    'metal-nfc-business-card',
+    'nfc-google-reviews',
+    'nfc-vs-qr',
+    'qr-code-generator',
+    'nfc-card-near',
+];
+$isSpaPage = $spaPath === ''
+    || in_array($spaPath, $spaPages, true)
+    || preg_match('#^nfc-card-near/[a-z0-9-]+$#', $spaPath) === 1;
+
+if (
+    in_array($host, ['vcarde.com', 'www.vcarde.com'], true)
+    && in_array($method, ['GET', 'HEAD'], true)
+    && $isSpaPage
+    && $publicRoot
+) {
+    $spaHome = $publicRoot.'/spa-home/index.html';
+    if (is_file($spaHome)) {
+        header('Content-Type: text/html; charset=UTF-8');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('CDN-Cache-Control: no-store');
+        header('X-Content-Type-Options: nosniff');
+        header('Content-Length: '.filesize($spaHome));
+        if ($method !== 'HEAD') {
+            readfile($spaHome);
+        }
+        exit;
+    }
+}
+
 require __DIR__.'/public/index.php';
