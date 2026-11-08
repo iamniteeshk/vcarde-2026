@@ -26,21 +26,29 @@ body:has(.authImage) .authImage > .dropdown {
     top: 20px;
     right: 20px;
     margin: 0 !important;
+    z-index: 30;
 }
 
 body:has(.authImage) .login-section.bg-white,
 body:has(.authImage) .register-section.bg-white,
 body:has(.authImage) .forget-password-section.bg-white,
 body:has(.authImage) .reset-password-section.bg-white {
-    width: 100%;
-    min-height: 0 !important;
-    height: auto !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 5;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    margin: 0 !important;
+    padding: 24px 16px !important;
     display: flex !important;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
     background: transparent !important;
     background-image: none !important;
-    overflow: visible !important;
+    overflow: auto !important;
 }
 
 body:has(.authImage) .top-vector,
@@ -113,9 +121,9 @@ body:has(.authImage) .register-form .image-mini img,
 body:has(.authImage) .reset-password-form .image-mini img {
     width: auto !important;
     min-width: 0 !important;
-    height: 64px !important;
-    max-height: 64px !important;
-    max-width: 92px !important;
+    height: 72px !important;
+    max-height: 72px !important;
+    max-width: 160px !important;
     object-fit: contain;
 }
 
