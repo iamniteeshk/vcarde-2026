@@ -1,0 +1,23 @@
+body {
+    background-image: 
+        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh2.png'), /* Right Image */
+        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh1.png'); /* Left Image */
+    background-size: auto 100%, auto 100%; /* Set the size of each image */
+    background-repeat: no-repeat, no-repeat; /* Disable repeating for both images */
+    background-position: right top, left top; /* Set positions for both images */
+    background-color: #010101; /* Set a fallback color */
+    color: #ffffff;
+}
+
+
+.bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
+    --bs-bg-opacity: 1;
+    background-color: #13151f!important;
+}
+.col-form-label, .form-label {
+    color: #ffffff;
+}
+h1.text-center.mb-7 {
+    color: green;
+}
+

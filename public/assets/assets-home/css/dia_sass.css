@@ -1,0 +1,82 @@
+.dia-home {
+		color: #DADADA;
+		}
+		body {
+			background-color: #000;
+		}
+		.saas_two_main_header {
+		background-color: #000;
+		color: #fff;
+		box-shadow: 0px 11px 68px 0px rgba(0, 0, 0, 0.14);
+		}
+		.saas_2-menu-bg-overlay {
+		background-color: #000;
+		}
+		.saas_two_section_title h2, .saas_two_banner_section .s2-banner_content h1, .saas_two_about_section .s2-about_text_icon .s2-about_text h3, .saas_two_feature_section .s2-feature_text h2, .integration_section .integration_text h2, .saas_two_team_section .s2-team_img_text .s2_name_info h3 {
+		font-weight: 700;
+		color: #fff;
+		}
+		.sa_fq_question_content .faq-feed-item h3 {
+		color: #fff;
+		font-size: 20px;
+		font-weight: 600;
+		padding-bottom: 15px;
+		}
+		.iwantcolortowhiteiamnk {
+			color:#fff;
+		}
+		.h1tag {
+			font-size: 42px;
+			color: #fff;
+		}
+		
+	
+		.s2-mobile_menu_content,.dropdown-menu{
+			background-color: #1B0234;
+			color:#ffffff
+		}
+		.navbar-nav{
+			
+			color: #fff;
+		}
+		.dropdowncustom {
+			background-color: #ffffff;
+		}
+		.dropdown-menu {
+			background-color: #58c856;
+		}
+		.polimenu {
+			background-color: #1B0234;
+		}
+		.s2-mobile_menu_content .s2-mobile-main-navigation .navbar-nav li a {
+			color: #fff;
+			background-color: #1B0234;
+			padding: 0;
+			width: 100%;
+			display: block;
+			font-size: 14px;
+			font-weight: 400;
+			padding: 5px 30px;
+			text-transform: uppercase;
+		}
+		.s2-mobile_menu .s2-mobile_menu_content .s2-mobile-main-navigation .navbar-nav .dropdown-menu {
+		border: none;
+		border-top-width: medium;
+		border-top-style: none;
+		border-top-color: currentcolor;
+		display: none;
+		transition: none;
+		box-shadow: none;
+		padding: 5px 0px;
+		width: 100%;
+		background-color: #1B0234;
+		}
+		.saas_two_main_header .saas_sign_up_btn a:before{
+			display: none;
+		}
+		.saas_sign_up_btn a img {
+			margin-right: 8px;
+		}
+        .bis-project-item-area{
+            margin-top: 100px;
+        }

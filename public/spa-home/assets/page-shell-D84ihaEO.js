@@ -1,0 +1,1 @@
+import{a as e,t}from"./site-header-Db5-4Kuo.js";import{k as n}from"./index-CUr4Ufsq.js";var r=n();function i({children:n}){return(0,r.jsxs)(`div`,{className:`min-h-svh bg-bg`,children:[(0,r.jsx)(t,{}),(0,r.jsx)(`main`,{children:n}),(0,r.jsx)(e,{})]})}export{i as t};

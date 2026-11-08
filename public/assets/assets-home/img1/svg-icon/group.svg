@@ -1,0 +1,25 @@
+<svg width="1920" height="740" viewBox="0 0 1920 740" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_255_3060" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="740">
+<rect width="1920" height="740" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_255_3060)">
+<g style="mix-blend-mode:multiply">
+<path d="M500 76L628 -21H593.867L500 76Z" fill="#AEF238" fill-opacity="0.5"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M235.368 327L572 -21H115L235.368 327Z" fill="#AEF238" fill-opacity="0.5"/>
+</g>
+<g style="mix-blend-mode:screen">
+<path d="M217 335.095L96.1355 -21H-115.128L-229 116.334V545.754L117.611 692L217 335.095Z" fill="#212121" fill-opacity="0.5"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M153 738L-107 630V655.268L153 738Z" fill="#AEF238" fill-opacity="0.5"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path d="M232.783 348L124 740H375L232.783 348Z" fill="#AEF238" fill-opacity="0.5"/>
+</g>
+<g style="mix-blend-mode:screen">
+<path d="M1358 -111L1914 553V-103.307L1358 -111Z" fill="#212121" fill-opacity="0.5"/>
+</g>
+</g>
+</svg>
