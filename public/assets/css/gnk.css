@@ -205,41 +205,79 @@ body:has(.authImage) .form-control::placeholder {
     color: rgba(255, 255, 255, 0.55);
 }
 
-body:has(.authImage) .login-btn,
-body:has(.authImage) button[type="submit"].btn,
-body:has(.authImage) .google-btn,
-body:has(.authImage) .facebook-btn {
-    width: 100%;
-    min-height: 48px;
-    height: 48px;
-    padding: 0 16px !important;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.2;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin: 0;
+/* Match homepage Login CTA: h-11, px-5, rounded-full, gradient fill. */
+body:has(.authImage) .auth-login-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px;
+    width: 100% !important;
+    margin-top: 4px;
 }
 
-body:has(.authImage) .login-btn,
-body:has(.authImage) button[type="submit"].btn {
-    background: #22c55e !important;
-    border-color: #16a34a !important;
-    color: #05210f !important;
+body:has(.authImage) .auth-login-actions > .btn,
+body:has(.authImage) .auth-login-actions > .login-btn,
+body:has(.authImage) .auth-login-actions > .google-btn,
+body:has(.authImage) .auth-login-actions > .facebook-btn,
+body:has(.authImage) .auth-login-actions > button.btn,
+body:has(.authImage) .auth-login-actions > a.btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transform: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
 }
 
-body:has(.authImage) .google-btn svg,
-body:has(.authImage) .facebook-btn i {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    margin-left: 0;
-    flex-shrink: 0;
-    font-size: 18px;
-    line-height: 1;
+body:has(.authImage) .auth-login-actions > .login-btn,
+body:has(.authImage) .auth-login-actions > button[type="submit"].btn {
+    color: #ffffff !important;
+    background-color: #02f746 !important;
+    background-image: linear-gradient(90deg, #02f746 0%, #3c10f2 50%, #02f746) !important;
+    background-size: 200% 100% !important;
+    background-position: 0% !important;
+}
+
+body:has(.authImage) .auth-login-actions > .google-btn {
+    background: #f2f2f2 !important;
+    background-image: none !important;
+    color: #202020 !important;
+}
+
+body:has(.authImage) .auth-login-actions > .facebook-btn {
+    background: #4284f5 !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+body:has(.authImage) .auth-login-actions > .google-btn svg,
+body:has(.authImage) .auth-login-actions > .facebook-btn i {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
 }
 
 body:has(.authImage) .link-info,
@@ -260,7 +298,6 @@ body:has(.authImage) #dropdownMenuButton1 {
     box-shadow: none !important;
 }
 
-body:has(.authImage) .login-form .row.justify-content-between,
 body:has(.authImage) .register-form .row.justify-content-between {
     display: flex;
     flex-direction: column;
@@ -268,7 +305,6 @@ body:has(.authImage) .register-form .row.justify-content-between {
     margin-top: 16px;
 }
 
-body:has(.authImage) .login-form .row.justify-content-between > [class*="col-"],
 body:has(.authImage) .register-form .row.justify-content-between > [class*="col-"] {
     width: 100%;
     max-width: 100%;
