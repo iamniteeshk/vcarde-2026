@@ -1,5 +1,8 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    # Force crawl files through the locked front controller so Cache-Control
+    # no-store is applied (static LiteSpeed/Cloudflare hits kept stale robots).
+    RewriteRule ^(robots\.txt|sitemap\.xml)$ index.php [L]
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
 
