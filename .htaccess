@@ -2,3 +2,25 @@
     RewriteEngine On
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
+
+# Block PHP handlers at the project root. The only PHP that should run is
+# the locked front controller (index.php) and what public/ allows.
+<FilesMatch "(?i)\.(php|phtml|phar|php\d+|php56)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<Files "index.php">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</Files>
