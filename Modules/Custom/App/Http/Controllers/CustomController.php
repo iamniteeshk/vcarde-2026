@@ -236,8 +236,6 @@ class CustomController extends Controller
         }
 
         $html = file_get_contents($htmlPath);
-        $v = (string) filemtime($htmlPath);
-        $html = preg_replace('/(\/spa-home\/assets\/[^"\']+\.(?:js|css))/', '$1?v='.$v, $html) ?? $html;
 
         return response($html, 200, [
             'Content-Type' => 'text/html; charset=UTF-8',

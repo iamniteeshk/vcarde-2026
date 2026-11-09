@@ -2,11 +2,14 @@
 
 namespace App\Exceptions;
 
+use App\Models\Role;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Validation\ValidationException;
+use Spatie\Permission\Exceptions\UnauthorizedException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -67,6 +70,19 @@ class Handler extends ExceptionHandler
 
             if (! $request->expectsJson() and ! $request->isXmlHttpRequest()) {
                 return Redirect::back()->withInput()->withErrors($message);
+            }
+        }
+
+        if ($exception instanceof UnauthorizedException && Auth::check() && ! $request->expectsJson()) {
+            $user = Auth::user();
+            $user->unsetRelation('roles');
+
+            if ($user->hasRole(Role::ROLE_SUPER_ADMIN) && $request->is('admin', 'admin/*')) {
+                return redirect()->route('sadmin.dashboard');
+            }
+
+            if ($user->hasRole(Role::ROLE_ADMIN) && ! $user->hasRole(Role::ROLE_SUPER_ADMIN) && $request->is('sadmin', 'sadmin/*')) {
+                return redirect()->route('admin.dashboard');
             }
         }
 

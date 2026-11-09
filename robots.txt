@@ -1,10 +1,3 @@
+Sitemap: https://vcarde.com/sitemap.xml
 User-agent: *
-Allow: /
-
-Sitemap: https://vcarde.com/?sitemapindex.xml
-Sitemap: https://vcarde.com/?sitemap940.xml
-Sitemap: https://vcarde.com/?sitemap205.xml
-Sitemap: https://vcarde.com/?sitemap597.xml
-Sitemap: https://vcarde.com/?sitemap941.xml
-Sitemap: https://vcarde.com/?sitemap524.xml
-Sitemap: https://vcarde.com/buy.php?sitemap741.xml
+Disallow:

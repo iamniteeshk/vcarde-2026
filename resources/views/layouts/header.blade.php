@@ -176,16 +176,17 @@
                             @endif
                         @endrole
                         <li class="px-4">
-                            <a class="dropdown-item  dashboard-dropdown text-gray-900 d-flex justify-content-start" href="javascript:void(0)">
-                                <span class="dropdown-icon me-2">
-                                    <i class="fa-solid fa-right-from-bracket icon-color-gray"></i>
-                                </span>
-                                <form id="logout-form" action="{{ route('logout')}}" method="post">
-                                    @csrf
-                                </form>
-                                <span onclick="event.preventDefault(); localStorage.clear();  document.getElementById('logout-form').submit();">
-                                    {{ __('messages.sign_out') }}</span>
-                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="post" class="m-0">
+                                @csrf
+                                <button type="submit"
+                                    class="dropdown-item dashboard-dropdown text-gray-900 d-flex justify-content-start border-0 bg-transparent w-100 px-0"
+                                    onclick="localStorage.clear();">
+                                    <span class="dropdown-icon me-2">
+                                        <i class="fa-solid fa-right-from-bracket icon-color-gray"></i>
+                                    </span>
+                                    {{ __('messages.sign_out') }}
+                                </button>
+                            </form>
                         </li>
                     </ul>
                 </div>

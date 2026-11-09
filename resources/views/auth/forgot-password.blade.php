@@ -19,12 +19,11 @@
             <div class="col-md-6 col-12 p-0 d-flex flex-column justify-content-center forget-password-section" @if(getLanguageByKey(checkFrontLanguageSession()) == 'Arabic' || getLanguageByKey(checkFrontLanguageSession()) == 'Persian') dir="rtl" @endif>
                 <div class="forget-password-form ">
                     <div class="col-12 text-center mt-0 mb-5 d-flex justify-content-center align-items-center">
-                        <div class="image image-mini me-3 mb-0">
+                        <div class="image image-mini mb-0">
                         <a href="{{ route('home') }}" class="image">
                             <img alt="Logo" src="{{ getLogoUrl() }}" class="img-fluid logo-fix-size">
                         </a>
                     </div>
-                        <span class="text-gray-900 fs-1 fw-bold">{{ getAppName() }}</span>
                     </div>
                     <div class="row element">
                     <div class="width-540 col-md-12 mt-1">

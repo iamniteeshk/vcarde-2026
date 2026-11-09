@@ -1,23 +1,363 @@
-body {
-    background-image: 
-        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh2.png'), /* Right Image */
-        url('https://vcarde.com/assets/assets-home/img/nft/banner/b-sh1.png'); /* Left Image */
-    background-size: auto 100%, auto 100%; /* Set the size of each image */
-    background-repeat: no-repeat, no-repeat; /* Disable repeating for both images */
-    background-position: right top, left top; /* Set positions for both images */
-    background-color: #010101; /* Set a fallback color */
-    color: #ffffff;
+/* Auth screens sit as one card in the middle of the aurora. */
+body:has(.authImage) {
+    background-color: #04141c !important;
+    background-image: url("/assets/images/login-aurora.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: #f4f7fb;
+    min-height: 100vh;
 }
 
+body:has(.authImage) .authImage {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    background-image: none !important;
+}
 
-.bg-white.rounded-15.shadow-md.width-540.px-5.px-sm-7.py-10.mx-auto {
-    --bs-bg-opacity: 1;
-    background-color: #13151f!important;
-}
-.col-form-label, .form-label {
-    color: #ffffff;
-}
-h1.text-center.mb-7 {
-    color: green;
+body:has(.authImage) .authImage > .dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0 !important;
+    z-index: 30;
 }
 
+body:has(.authImage) .login-section.bg-white,
+body:has(.authImage) .register-section.bg-white,
+body:has(.authImage) .forget-password-section.bg-white,
+body:has(.authImage) .reset-password-section.bg-white {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 5;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    margin: 0 !important;
+    padding: 24px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    background-image: none !important;
+    overflow: auto !important;
+}
+
+body:has(.authImage) .top-vector,
+body:has(.authImage) .bottom-vector,
+body:has(.authImage) .login-img,
+body:has(.authImage) .register-img,
+body:has(.authImage) .forget-password-img {
+    display: none !important;
+}
+
+body:has(.authImage) .login-section.bg-white > .row,
+body:has(.authImage) .register-section.bg-white > .row,
+body:has(.authImage) .forget-password-section.bg-white > .row,
+body:has(.authImage) .reset-password-section.bg-white > .row {
+    width: min(440px, calc(100vw - 32px));
+    margin: 0 auto !important;
+    justify-content: center;
+}
+
+body:has(.authImage) .login-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .register-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .forget-password-section.bg-white > .row > .col-md-6:first-child,
+body:has(.authImage) .reset-password-section.bg-white > .row > .col-md-6:first-child {
+    display: none !important;
+}
+
+body:has(.authImage) .login-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .register-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .forget-password-section.bg-white > .row > .col-md-6,
+body:has(.authImage) .reset-password-section.bg-white > .row > .col-md-6 {
+    width: 100%;
+    max-width: 440px;
+    flex: none;
+    padding: 0;
+    background: transparent !important;
+}
+
+body:has(.authImage) .forget-password-form .bg-white,
+body:has(.authImage) .reset-password-form .bg-white,
+body:has(.authImage) .register-form .bg-white,
+body:has(.authImage) .login-form .bg-white {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+body:has(.authImage) .login-form,
+body:has(.authImage) .register-form,
+body:has(.authImage) .forget-password-form,
+body:has(.authImage) .reset-password-form,
+body:has(.authImage) .modern-login-card {
+    height: auto !important;
+    width: 100%;
+    background: rgba(7, 16, 32, 0.82) !important;
+    color: #f4f7fb !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45) !important;
+    padding: 32px 28px 18px !important;
+    backdrop-filter: blur(16px);
+}
+
+body:has(.authImage) .login-section,
+body:has(.authImage) .register-section,
+body:has(.authImage) .forget-password-section,
+body:has(.authImage) .reset-password-section {
+    margin-top: 0 !important;
+}
+
+body:has(.authImage) .login-app-name {
+    margin-bottom: 8px;
+}
+
+/* The uploaded mark is the V plus the word CARDe. Auth screens show the V only. */
+body:has(.authImage) .login-app-name .image,
+body:has(.authImage) .login-app-name .image-mini,
+body:has(.authImage) .forget-password-form .image,
+body:has(.authImage) .forget-password-form .image-mini,
+body:has(.authImage) .register-form .image,
+body:has(.authImage) .register-form .image-mini,
+body:has(.authImage) .reset-password-form .image,
+body:has(.authImage) .reset-password-form .image-mini {
+    display: inline-block !important;
+    width: 78px !important;
+    height: 92px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    line-height: 0;
+}
+
+body:has(.authImage) .login-app-name img,
+body:has(.authImage) .forget-password-form .image img,
+body:has(.authImage) .forget-password-form .image-mini img,
+body:has(.authImage) .register-form .image img,
+body:has(.authImage) .register-form .image-mini img,
+body:has(.authImage) .reset-password-form .image img,
+body:has(.authImage) .reset-password-form .image-mini img {
+    width: 251px !important;
+    height: 167px !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: fill !important;
+    margin: -35px 0 0 -8px !important;
+}
+
+body:has(.authImage) .login-app-name .fs-1,
+body:has(.authImage) .forget-password-form .fs-1.fw-bold,
+body:has(.authImage) .register-form .fs-1.fw-bold,
+body:has(.authImage) .reset-password-form .fs-1.fw-bold {
+    display: none !important;
+}
+
+body:has(.authImage) .input-password-hide,
+body:has(.authImage) .input-icon {
+    color: rgba(244, 247, 251, 0.72) !important;
+}
+
+body:has(.authImage) .form-check-input {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+body:has(.authImage) .form-check-input:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
+}
+
+body:has(.authImage) .login-app-name .text-gray-900,
+body:has(.authImage) .login-form .text-gray-900,
+body:has(.authImage) .register-form .text-gray-900,
+body:has(.authImage) .forget-password-form .text-gray-900,
+body:has(.authImage) .reset-password-form .text-gray-900,
+body:has(.authImage) h1.text-center.mb-7,
+body:has(.authImage) .forget-password-form h1,
+body:has(.authImage) .reset-password-form h1,
+body:has(.authImage) .forget-password-form .fs-4,
+body:has(.authImage) .reset-password-form .fs-4,
+body:has(.authImage) .form-label,
+body:has(.authImage) .col-form-label,
+body:has(.authImage) .form-check-label {
+    color: #f4f7fb !important;
+}
+
+body:has(.authImage) .form-control {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+    border-radius: 12px;
+    min-height: 46px;
+}
+
+body:has(.authImage) .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+body:has(.authImage) .login-btn,
+body:has(.authImage) button[type="submit"].btn {
+    background: #22c55e !important;
+    border-color: #16a34a !important;
+    color: #05210f !important;
+    font-weight: 700;
+    border-radius: 12px;
+    min-height: 48px;
+}
+
+body:has(.authImage) .link-info,
+body:has(.authImage) .copyright a {
+    color: #86efac !important;
+}
+
+body:has(.authImage) .copyright,
+body:has(.authImage) .text-muted {
+    color: rgba(244, 247, 251, 0.62) !important;
+}
+
+body:has(.authImage) #dropdownMenuButton1 {
+    background: rgba(7, 16, 32, 0.55) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: #f4f7fb !important;
+    border-radius: 999px;
+    box-shadow: none !important;
+}
+
+body:has(.authImage) .google-btn,
+body:has(.authImage) .facebook-btn {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 46px;
+    justify-content: center;
+}
+
+body:has(.authImage) .login-form .row.justify-content-between,
+body:has(.authImage) .register-form .row.justify-content-between {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+body:has(.authImage) .login-form .row.justify-content-between > [class*="col-"],
+body:has(.authImage) .register-form .row.justify-content-between > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+/*
+ * Light admin: light page, vivid cards.
+ * #nav-header.bg-white is only rendered when theme_mode is light.
+ */
+body:has(#nav-header.bg-white) {
+    background-color: #f4f6fb !important;
+    background-image: none !important;
+    color: #1c2430;
+}
+
+body:has(#nav-header.bg-white) .flex-root,
+body:has(#nav-header.bg-white) .wrapper,
+body:has(#nav-header.bg-white) .content {
+    background-color: #f4f6fb !important;
+    background-image: none !important;
+}
+
+body:has(#nav-header.bg-white) .header .btn,
+body:has(#nav-header.bg-white) .header .dropdown-toggle,
+body:has(#nav-header.bg-white) .header .nav-link,
+body:has(#nav-header.bg-white) .header .dashboard-theme-icons {
+    color: #1c2430 !important;
+}
+
+/*
+ * Dark admin: dark page, same vivid cards.
+ */
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) {
+    background-color: #0e1117 !important;
+    background-image: none !important;
+    color: #f5f7fb;
+}
+
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .flex-root,
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .wrapper,
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .content {
+    background-color: #0e1117 !important;
+    background-image: none !important;
+}
+
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .header .btn,
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .header .dropdown-toggle,
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .header .nav-link,
+body:has(.aside-menu-container):not(:has(#nav-header.bg-white)) .header .dashboard-theme-icons {
+    color: #f5f7fb !important;
+}
+
+/* Shared vivid stat cards. Hue stays, fill is solid so it reads on both themes. */
+.dashboard-card-row .dashboard-card:nth-child(1) .dashboard-card-bg {
+    background: #3d4db7 !important;
+    background-image: none !important;
+    border: 1px solid #2f3d9e !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(2) .dashboard-card-bg {
+    background: #f08a00 !important;
+    background-image: none !important;
+    border: 1px solid #d97706 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(3) .dashboard-card-bg {
+    background: #1f9d55 !important;
+    background-image: none !important;
+    border: 1px solid #178a49 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(4) .dashboard-card-bg {
+    background: #e03131 !important;
+    background-image: none !important;
+    border: 1px solid #c22525 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(5) .dashboard-card-bg {
+    background: #c8960a !important;
+    background-image: none !important;
+    border: 1px solid #a87d08 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(6) .dashboard-card-bg {
+    background: #0f8a6b !important;
+    background-image: none !important;
+    border: 1px solid #0c7359 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(7) .dashboard-card-bg {
+    background: #d23ca8 !important;
+    background-image: none !important;
+    border: 1px solid #b42d90 !important;
+}
+
+.dashboard-card-row .dashboard-card:nth-child(8) .dashboard-card-bg {
+    background: #e8590c !important;
+    background-image: none !important;
+    border: 1px solid #c74b09 !important;
+}
+
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content p,
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content h5 {
+    color: #ffffff !important;
+    opacity: 1;
+}
+
+.dashboard-card-row .dashboard-card .dashboard-card-bg .dashboard-card-content p {
+    opacity: 0.92;
+}
