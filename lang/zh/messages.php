@@ -1649,6 +1649,7 @@ return [
         'purchased_plan' => '您成功购买了此计划。',
         'subscribed_plan' => '您已成功订阅此计划。',
         'subscribed_plan_wait' => '您已成功订阅此计划，但等待管理员确认',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => '通过谷歌登录',
         'login_via_facebook' => '通过脸书登入',
         'registered_success' => '您已注册成功，请通过邮件激活您的帐户。',

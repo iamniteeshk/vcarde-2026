@@ -1638,6 +1638,7 @@ return [
         'purchased_plan' => 'Вы успешно приобрели этот план.',
         'subscribed_plan' => 'Вы успешно подписались на этот план.',
         'subscribed_plan_wait' => 'Вы успешно подписались на этот план, но ждете подтверждения от администратора',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Войти через Google',
         'login_via_facebook' => 'Войти через Facebook',
         'registered_success' => 'Вы успешно зарегистрировались, Активируйте аккаунт с почты.',

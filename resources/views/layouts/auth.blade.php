@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=10') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/gnk.css?v=14') }}">
     @stack('css')
     @yield('css')
     {!! ReCaptcha::htmlScriptTagJsApi() !!}

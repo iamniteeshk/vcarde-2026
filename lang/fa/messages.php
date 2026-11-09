@@ -1650,6 +1650,7 @@ return [
         'purchased_plan' => 'شما این پلن را با موفقیت خریداری کردید.',
         'subscribed_plan' => 'شما با موفقیت در این پلن مشترک شدید.',
         'subscribed_plan_wait' => 'شما با موفقیت در این پلن مشترک شدید اما منتظر تایید مدیر باشید',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'ورود از طریق گوگل',
         'login_via_facebook' => 'ورود از طریق فیس‌بوک',
         'registered_success' => 'شما با موفقیت ثبت‌نام کردید، حساب خود را از طریق ایمیل فعال کنید.',

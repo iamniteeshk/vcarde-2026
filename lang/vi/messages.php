@@ -1633,6 +1633,7 @@ return [
         'purchased_plan' => 'Bạn đã mua kế hoạch này thành công.',
         'subscribed_plan' => 'Bạn đã đăng ký kế hoạch này thành công.',
         'subscribed_plan_wait' => 'Bạn đã đăng ký kế hoạch này thành công nhưng vui lòng chờ xác nhận từ Quản trị viên.',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Đăng nhập qua Google',
         'login_via_facebook' => 'Đăng nhập qua Facebook',
         'registered_success' => 'Bạn đã đăng ký thành công, kích hoạt tài khoản của bạn từ email.',

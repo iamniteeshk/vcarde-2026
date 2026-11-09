@@ -1649,6 +1649,7 @@ return [
         'purchased_plan' => 'Sie kaufen diesen Plan erfolgreich.',
         'subscribed_plan' => 'Sie haben diesen Plan erfolgreich abonniert.',
         'subscribed_plan_wait' => 'Sie haben diesen Plan erfolgreich abonniert, warten aber auf die Bestätigung des Administrators',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Anmeldung über Google',
         'login_via_facebook' => 'Einloggen über Facebook',
         'registered_success' => 'Sie haben sich erfolgreich registriert, aktivieren Sie Ihr Konto per Mail.',
