@@ -1,3 +1,15 @@
-Sitemap: https://vcarde.com/sitemap.xml
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /admin
+Disallow: /sadmin
+Disallow: /login
+Disallow: /register
+Disallow: /password
+Disallow: /email
+Disallow: /user
+Disallow: /dashboard
+Disallow: /cpanel
+Disallow: /api/
+
+Sitemap: https://vcarde.com/sitemap.xml

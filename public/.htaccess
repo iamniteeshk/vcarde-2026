@@ -42,3 +42,14 @@
         Allow from all
     </IfModule>
 </FilesMatch>
+
+# Do not let Cloudflare keep a stale robots/sitemap (placeholder Sitemap URLs
+# previously blocked crawlers for hours after a fix).
+<IfModule mod_headers.c>
+    <FilesMatch "^(robots\.txt|sitemap\.xml)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set CDN-Cache-Control "no-store"
+        Header set Cloudflare-CDN-Cache-Control "no-store"
+    </FilesMatch>
+</IfModule>
