@@ -113,15 +113,21 @@ if (
     && $publicRoot
 ) {
     $spaHome = $publicRoot.'/spa-home/index.html';
+    $spaSeo = $publicRoot.'/spa-home/seo.php';
     if (is_file($spaHome)) {
+        $html = (string) file_get_contents($spaHome);
+        if (is_file($spaSeo)) {
+            require_once $spaSeo;
+            $html = vcarde_spa_seo_apply($html, $uri);
+        }
         header('Content-Type: text/html; charset=UTF-8');
         header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
         header('Pragma: no-cache');
         header('CDN-Cache-Control: no-store');
         header('X-Content-Type-Options: nosniff');
-        header('Content-Length: '.filesize($spaHome));
+        header('Content-Length: '.strlen($html));
         if ($method !== 'HEAD') {
-            readfile($spaHome);
+            echo $html;
         }
         exit;
     }

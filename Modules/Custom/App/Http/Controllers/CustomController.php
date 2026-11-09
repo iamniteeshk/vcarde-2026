@@ -230,12 +230,17 @@ class CustomController extends Controller
     public function showGrokHome()
     {
         $htmlPath = public_path('spa-home/index.html');
+        $seoPath = public_path('spa-home/seo.php');
 
         if (! is_file($htmlPath)) {
             abort(404);
         }
 
-        $html = file_get_contents($htmlPath);
+        $html = (string) file_get_contents($htmlPath);
+        if (is_file($seoPath)) {
+            require_once $seoPath;
+            $html = vcarde_spa_seo_apply($html, request()->getRequestUri());
+        }
 
         return response($html, 200, [
             'Content-Type' => 'text/html; charset=UTF-8',
