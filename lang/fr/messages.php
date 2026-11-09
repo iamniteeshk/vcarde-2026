@@ -1635,6 +1635,7 @@ return [
         'purchased_plan' => 'Rendez-vous créé avec succès.',
         'subscribed_plan' => 'Vous avez souscrit à ce plan avec succès.',
         'subscribed_plan_wait' => 'Vous avez souscrit à ce plan avec succès, mais attendez la confirmation del\'administrateur',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Connectez-vous via Google',
         'login_via_facebook' => 'Connectez-vous via Facebook',
         'registered_success' => 'Vous vous êtes inscrit avec succès, activez votre compte par e-mail.',

@@ -206,13 +206,40 @@ body:has(.authImage) .form-control::placeholder {
 }
 
 body:has(.authImage) .login-btn,
+body:has(.authImage) button[type="submit"].btn,
+body:has(.authImage) .google-btn,
+body:has(.authImage) .facebook-btn {
+    width: 100%;
+    min-height: 48px;
+    height: 48px;
+    padding: 0 16px !important;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body:has(.authImage) .login-btn,
 body:has(.authImage) button[type="submit"].btn {
     background: #22c55e !important;
     border-color: #16a34a !important;
     color: #05210f !important;
-    font-weight: 700;
-    border-radius: 12px;
-    min-height: 48px;
+}
+
+body:has(.authImage) .google-btn svg,
+body:has(.authImage) .facebook-btn i {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-left: 0;
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1;
 }
 
 body:has(.authImage) .link-info,
@@ -231,14 +258,6 @@ body:has(.authImage) #dropdownMenuButton1 {
     color: #f4f7fb !important;
     border-radius: 999px;
     box-shadow: none !important;
-}
-
-body:has(.authImage) .google-btn,
-body:has(.authImage) .facebook-btn {
-    width: 100%;
-    border-radius: 12px;
-    min-height: 46px;
-    justify-content: center;
 }
 
 body:has(.authImage) .login-form .row.justify-content-between,

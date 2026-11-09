@@ -1638,6 +1638,7 @@ return [
         'purchased_plan' => 'Você compra este plano com sucesso.',
         'subscribed_plan' => 'Você assinou este plano com sucesso.',
         'subscribed_plan_wait' => 'Você assinou este plano com sucesso, mas aguarda a confirmação do administrador',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Entrar pelo Google',
         'login_via_facebook' => 'Entrar pelo Facebook',
         'registered_success' => 'Você se registrou com sucesso, ative sua conta do e-mail.',

@@ -1633,6 +1633,7 @@ return [
         'purchased_plan' => 'Bu planı başarıyla satın aldınız..',
         'subscribed_plan' => 'Bu plana başarıyla abone oldunuz.',
         'subscribed_plan_wait' => "Bu plana başarıyla abone oldunuz ancak Yönetici'den onay bekliyorsunuz",
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Войти через Google',
         'login_via_facebook' => 'Войти через Facebook',
         'registered_success' => 'Başarıyla kayıt oldunuz, Hesabınızı postadan etkinleştirin.',

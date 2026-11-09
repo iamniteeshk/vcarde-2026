@@ -1647,6 +1647,7 @@ return [
         'purchased_plan' => 'Hai acquistato questo piano con successo.',
         'subscribed_plan' => 'Ti sei iscritto a questo piano con successo.',
         'subscribed_plan_wait' => 'Ti sei iscritto a questo piano con successo, ma attendi la conferma dell\'amministratore',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'Accedi tramite Google',
         'login_via_facebook' => 'Accedi tramite Facebook',
         'registered_success' => 'Ti sei registrato con successo, attiva il tuo account dalla mail.',

@@ -1634,6 +1634,7 @@ return [
         'purchased_plan' => 'قمت بشراء هذه الخطة بنجاح.',
         'subscribed_plan' => 'لقد اشتركت في هذه الخطة بنجاح.',
         'subscribed_plan_wait' => 'لقد اشتركت في هذه الخطة بنجاح ولكن انتظر التأكيد من المسؤول',
+        'login_via_email' => 'Login via Email',
         'login_via_google' => 'تسجيل الدخول عبر جوجل',
         'login_via_facebook' => 'تسجيل الدخول عبر Facebook',
         'registered_success' => 'لقد قمت بالتسجيل بنجاح ، قم بتفعيل حسابك من البريد.',
