@@ -11,6 +11,26 @@
 $publicRoot = realpath(__DIR__.'/public');
 $uri = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
 
+// Serve crawl files from PHP so Cloudflare cannot keep a multi-hour stale
+// robots.txt (placeholder Sitemap URLs previously blocked discovery).
+if ($publicRoot && in_array($uri, ['/robots.txt', '/sitemap.xml'], true)) {
+    $crawlFile = $publicRoot.$uri;
+    if (is_file($crawlFile)) {
+        $type = $uri === '/robots.txt'
+            ? 'text/plain; charset=UTF-8'
+            : 'application/xml; charset=UTF-8';
+        header('Content-Type: '.$type);
+        header('X-Content-Type-Options: nosniff');
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('CDN-Cache-Control: no-store');
+        header('Cloudflare-CDN-Cache-Control: no-store');
+        header('Content-Length: '.filesize($crawlFile));
+        readfile($crawlFile);
+        exit;
+    }
+}
+
 if ($publicRoot && $uri !== '/' && strpos($uri, "\0") === false) {
     $candidate = $publicRoot.DIRECTORY_SEPARATOR.ltrim($uri, '/');
     $resolved = realpath($candidate);
@@ -69,6 +89,14 @@ if ($publicRoot && $uri !== '/' && strpos($uri, "\0") === false) {
                 header('Content-Type: '.$types[$extension]);
             }
             header('X-Content-Type-Options: nosniff');
+            // Keep crawl files fresh at Cloudflare / browsers. Stale robots.txt
+            // with placeholder Sitemap URLs blocks indexing.
+            if (in_array($uri, ['/robots.txt', '/sitemap.xml', '/spa-home/robots.txt', '/spa-home/sitemap.xml'], true)) {
+                header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+                header('Pragma: no-cache');
+                header('CDN-Cache-Control: no-store');
+                header('Cloudflare-CDN-Cache-Control: no-store');
+            }
             header('Content-Length: '.filesize($resolved));
             readfile($resolved);
             exit;
